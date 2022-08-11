@@ -10,7 +10,7 @@ service EnquiryService {
 
 message EnquiryData {
   int32 id = 1;
-  string creator = 2;
+  int32 creator = 2;
   string title = 3;
 }
 
