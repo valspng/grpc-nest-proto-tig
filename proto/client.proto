@@ -8,13 +8,13 @@ service ClientService {
   rpc GetEnquiriesByUserId (GetEnquiriesByUserIdRequest) returns (GetEnquiriesByUserIdResponse) {}
 }
 
-message CreateEnquiryRequest {
+message PostEnquiryRequest {
   string name = 1;
   string title = 2;
   string message = 3;
 }
 
-message CreateEnquiryResponse {
+message PostEnquiryResponse {
   int32 status = 1;
   repeated string error = 2;
   int32 enquiryId = 3;
