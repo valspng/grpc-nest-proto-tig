@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+package Client;
+
+service ClientService {
+  rpc PostEnquiry (PostEnquiryRequest) returns (PostEnquiryResponse) {}
+  rpc GetEnquiryById (GetEnquiryByIdRequest) returns (GetEnquiryByIdResponse) {}
+  rpc GetEnquiriesByUserId (GetEnquiriesByUserIdRequest) returns (GetEnquiriesByUserIdResponse) {}
+}
+
+message CreateEnquiryRequest {
+  string name = 1;
+  string title = 2;
+  string message = 3;
+}
+
+message CreateEnquiryResponse {
+  int32 status = 1;
+  repeated string error = 2;
+  int32 enquiryId = 3;
+}
+
+message EnquiryData {
+  int32 id = 1;
+  string identityName = 2;
+  string name = 3;
+}
+
+message UserData {
+  int32 id = 1;
+  string identityName = 2;
+  string name = 3;
+}
+
+message EnquiryParticipantsData {
+  int32 id = 1;
+  string identityName = 2;
+  string name = 3;
+  repeated UserData participants = 3;
+}
+
+message GetEnquiryByIdRequest {
+  int32 enquiryId = 1;
+}
+
+message GetEnquiryByIdResponse {
+  int32 id = 1;
+  repeated string error = 2;
+  EnquiryParticipantsData data = 3;
+}
+
+message GetEnquiriesByUserIdRequest {
+  int32 identityId = 1;
+}
+
+message GetEnquiriesByUserIdResponse {
+  int32 id = 1;
+  string title = 2;
+  repeated EnquiryData data = 3;
+}

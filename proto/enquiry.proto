@@ -32,7 +32,7 @@ message GetByIdEnquiryRequest {
 message GetByIdEnquiryResponse {
   int32 id = 1;
   repeated string error = 2;
-  repeated UserData participants = 3;
+  EnquiryData data = 3;
 }
 
 message UserData {
@@ -48,6 +48,5 @@ message GetByUserIdEnquiryRequest {
 message GetByUserIdEnquiryResponse {
   int32 id = 1;
   string title = 2;
- 
   repeated EnquiryData data = 3;
 }
