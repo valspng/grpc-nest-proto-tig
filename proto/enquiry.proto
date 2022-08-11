@@ -26,13 +26,13 @@ message CreateEnquiryResponse {
 }
 
 message GetByIdEnquiryRequest {
-  int32 userId = 1;
+  int32 id = 1;
 }
 
 message GetByIdEnquiryResponse {
   int32 id = 1;
   repeated string error = 2;
-  EnquiryData data = 3;
+  repeated EnquiryData data = 3;
 }
 
 message UserData {
