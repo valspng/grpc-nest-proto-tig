@@ -22,21 +22,21 @@ message CreateEnquiryResponse {
 
 message EnquiryData {
   int32 id = 1;
-  string identityName = 2;
-  string name = 3;
+  int32 creator = 2;
+  string title = 3;
 }
 
 message UserData {
   int32 id = 1;
-  string identityName = 2;
+  int32 identityId = 2;
   string name = 3;
 }
 
 message EnquiryParticipantsData {
   int32 id = 1;
-  string identityName = 2;
-  string name = 3;
-  repeated UserData participants = 3;
+  int32 creator = 2;
+  string title = 3;
+  repeated UserData participants = 4;
 }
 
 message GetEnquiryByIdRequest {

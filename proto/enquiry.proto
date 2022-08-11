@@ -35,12 +35,6 @@ message GetByIdEnquiryResponse {
   EnquiryData data = 3;
 }
 
-message UserData {
-  int32 id = 1;
-  string identityName = 2;
-  string name = 3;
-}
-
 message GetByUserIdEnquiryRequest {
   int32 userId = 1;
 }
