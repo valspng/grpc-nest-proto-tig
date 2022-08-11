@@ -8,6 +8,12 @@ service AccountsService {
   rpc GetUsersList (GetUsersListRequest) returns (GetUsersListResponse) {}
 }
 
+message UserData {
+  int32 id = 1;
+  string identityName = 2;
+  string name = 3;
+}
+
 message CreateUserRequest {
   string name = 1;
 }
@@ -15,13 +21,7 @@ message CreateUserRequest {
 message CreateUserResponse {
   int32 status = 1;
   repeated string error = 2;
-  string identityId = 3;
-}
-
-message UserData {
-  int32 id = 1;
-  string identityName = 2;
-  string name = 3;
+  UserData data = 3;
 }
 
 message GetUserRequest {
