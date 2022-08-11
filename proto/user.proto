@@ -15,16 +15,17 @@ message CreateUserRequest {
 message CreateUserResponse {
   int32 status = 1;
   repeated string error = 2;
-}
-
-message GetUserRequest {
-  string identityId = 1;
+  string identityId = 3;
 }
 
 message UserData {
   int32 id = 1;
   string identityName = 2;
   string name = 3;
+}
+
+message GetUserRequest {
+  string identityId = 1;
 }
 
 message GetUserResponse {
