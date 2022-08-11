@@ -10,7 +10,7 @@ service AccountsService {
 
 message UserData {
   int32 id = 1;
-  string identityName = 2;
+  string identityId = 2;
   string name = 3;
 }
 
