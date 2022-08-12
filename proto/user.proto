@@ -5,7 +5,7 @@ package Accounts;
 service AccountsService {
   rpc CreateUser (CreateUserRequest) returns (CreateUserResponse) {}
   rpc GetUser (GetUserRequest) returns (GetUserResponse) {}
-  rpc GetUsersById (GetUserByIdRequest) returns (GetUsersByIdResponse) {}
+  rpc GetUserById (GetUserByIdRequest) returns (GetUsersByIdResponse) {}
 }
 
 message UserData {
