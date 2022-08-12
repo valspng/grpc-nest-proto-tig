@@ -69,8 +69,6 @@ message MessageData {
 
 message GetMessageRequest {
    int32 enquiryId = 1;
-   int32 userId = 2;
-   string body = 3;
 }
 
 message GetMessageResponse {
