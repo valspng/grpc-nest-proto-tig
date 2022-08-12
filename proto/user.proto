@@ -5,7 +5,7 @@ package Accounts;
 service AccountsService {
   rpc CreateUser (CreateUserRequest) returns (CreateUserResponse) {}
   rpc GetUser (GetUserRequest) returns (GetUserResponse) {}
-  rpc GetUsersList (GetUsersListRequest) returns (GetUsersListResponse) {}
+  rpc GetUsersById (GetUserByIdRequest) returns (GetUsersByIdResponse) {}
 }
 
 message UserData {
@@ -34,12 +34,12 @@ message GetUserResponse {
   UserData data = 3;
 }
 
-message GetUsersListRequest {
-  repeated string users = 1;
+message GetUserByIdRequest {
+  int32 userId = 1;
 }
 
-message GetUsersListResponse {
+message GetUsersByIdResponse {
   int32 status = 1;
   repeated string error = 2;
-  repeated UserData users = 3;
+  UserData data = 3;
 }
