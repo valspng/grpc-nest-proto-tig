@@ -55,6 +55,6 @@ message GetEnquiriesByUserIdRequest {
 
 message GetEnquiriesByUserIdResponse {
   int32 status = 1;
-  repeated string title = 2;
+  repeated string error = 2;
   repeated EnquiryData data = 3;
 }
