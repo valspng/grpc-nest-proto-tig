@@ -24,17 +24,11 @@ message ParticipantData {
   int32 enquiryId = 3;
 }
 
-message UserData {
-  int32 id = 1;
-  int32 identityId = 2;
-  string name = 3;
-}
-
 message EnquiryParticipantsData {
   int32 id = 1;
   int32 creator = 2;
   string title = 3;
-  repeated UserData participants = 4;
+  repeated ParticipantData participants = 4;
 }
 
 message CreateEnquiryRequest {
