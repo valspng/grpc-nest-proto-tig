@@ -8,6 +8,8 @@ service EnquiryService {
   rpc GetByUserIdEnquiry (GetByUserIdEnquiryRequest) returns (GetByUserIdEnquiryResponse) {}
   rpc CreateMessage (CreateMessageRequest) returns (CreateMessageResponse) {}
   rpc GetMessage (GetMessageRequest) returns (GetMessageResponse) {}
+  rpc CreateParticipants (createParticipantsRequest) returns (createParticipantsResponse) {}
+  rpc GetParticipants (GetParticipantsRequest) returns (GetParticipantsResponse) {}
 }
 
 message EnquiryData {
@@ -75,4 +77,30 @@ message GetMessageResponse {
   int32 status = 1;
   repeated string error = 2;
   MessageData data = 3;
+}
+
+message ParticipantData {
+  int32 id = 1;
+  int32 sender = 2;
+  int32 enquiryId = 3;
+}
+
+message createParticipantsRequest {
+  int32 sender = 1;
+  int32 enquiryId = 2;
+}
+
+message createParticipantsResponse {
+  int32 status = 1;
+  repeated string error = 2;
+}
+
+message GetParticipantsRequest {
+  int32 enquiryId = 1;
+}
+
+message GetParticipantsResponse {
+  int32 status = 1;
+  repeated string error = 2;
+  repeated ParticipantData data = 3;
 }
