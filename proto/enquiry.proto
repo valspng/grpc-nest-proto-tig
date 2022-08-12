@@ -4,7 +4,7 @@ package Enquiry;
 
 service EnquiryService {
   rpc CreateEnquiry (CreateEnquiryRequest) returns (CreateEnquiryResponse) {}
-  rpc GetByIdEnquiry (GetByIdEnquiryRequest) returns (GetByIdEnquiryResponse) {}
+  rpc GetEnquiryById (GetByIdEnquiryRequest) returns (GetByIdEnquiryResponse) {}
   rpc GetEnquiryByUserId (GetByUserIdEnquiryRequest) returns (GetByUserIdEnquiryResponse) {}
   rpc CreateMessage (CreateMessageRequest) returns (CreateMessageResponse) {}
   rpc GetMessage (GetMessageRequest) returns (GetMessageResponse) {}
