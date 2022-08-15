@@ -9,7 +9,7 @@ service AccountsService {
 }
 
 message UserData {
-  int32 id = 1;
+  string id = 1;
   string identityId = 2;
   string name = 3;
 }
@@ -35,7 +35,7 @@ message GetUserResponse {
 }
 
 message GetUserByIdRequest {
-  int32 userId = 1;
+  string userId = 1;
 }
 
 message GetUsersByIdResponse {

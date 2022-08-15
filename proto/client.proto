@@ -21,37 +21,37 @@ message PostEnquiryResponse {
 }
 
 message EnquiryData {
-  int32 id = 1;
-  int32 creator = 2;
+  string id = 1;
+  string creator = 2;
   string title = 3;
 }
 
 message UserData {
-  int32 id = 1;
-  int32 identityId = 2;
+  string id = 1;
+  string identityId = 2;
   string name = 3;
 }
 
 message EnquiryParticipantsData {
-  int32 id = 1;
-  int32 creator = 2;
+  string id = 1;
+  string creator = 2;
   string title = 3;
   repeated UserData participants = 4;
 }
 
 message GetEnquiryByIdRequest {
-  int32 enquiryId = 1;
+  string enquiryId = 1;
 }
 
 message GetEnquiryByIdResponse {
-  int32 id = 1;
+  int32 status = 1;
   repeated string error = 2;
   string title = 3;
   repeated UserData participants = 4;
 }
 
 message GetEnquiriesByUserIdRequest {
-  int32 identityId = 1;
+  string identityId = 1;
 }
 
 message GetEnquiriesByUserIdResponse {
